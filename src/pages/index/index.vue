@@ -1,14 +1,14 @@
 <template>
   <view class="content">
-    <!-- <div>hi</div> -->
+    <div>hi</div>
     <!-- <p>{{ $t("message.hello", { msg: "hello" }) }}</p> -->
     <!-- <p v-html="$t('message.hello2')"></p> -->
-    <view class="title">{{ $t("schema.name") }}</view>
-    <uni-card :title="title" extra="额外信息">
+    <!-- <view class="title">{{ $t("schema.name") }}</view> -->
+   <!-- <uni-card :title="title" extra="额外信息">
       <text>这是一个基础卡片示例，此示例展示了一个标题加标题额外信息的标准卡片。</text>
-    </uni-card>
+    </uni-card> -->
     <button @tap="changeLanguage">change language</button>
-    <!-- <uni-badge text="uni - badge" type="default" size="normal" /> -->
+    <uni-badge text="uni - badge" type="default" size="normal" />
   </view>
 </template>
 
