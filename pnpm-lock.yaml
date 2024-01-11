@@ -62,6 +62,9 @@ dependencies:
   '@dcloudio/uni-stat':
     specifier: ^2.0.1-alpha-36920221121001
     version: 2.0.1-alpha-36920221121001
+  '@dcloudio/uni-ui':
+    specifier: ^1.4.28
+    version: 1.4.28
   '@vue/shared':
     specifier: ^3.0.0
     version: 3.4.7
@@ -74,6 +77,9 @@ dependencies:
   vue:
     specifier: '>= 2.6.14 < 2.7'
     version: 2.6.14
+  vue-i18n:
+    specifier: '8'
+    version: 8.28.2(vue@2.6.14)
   vuex:
     specifier: ^3.2.0
     version: 3.6.2(vue@2.6.14)
@@ -120,7 +126,7 @@ devDependencies:
     version: 5.0.8(@vue/cli-service@5.0.8)(core-js@3.35.0)(vue@2.6.14)
   '@vue/cli-service':
     specifier: ~5.0.0
-    version: 5.0.8(vue-template-compiler@2.6.14)(vue@2.6.14)
+    version: 5.0.8(sass-loader@13.3.3)(vue-template-compiler@2.6.14)(vue@2.6.14)
   babel-plugin-import:
     specifier: ^1.11.0
     version: 1.13.8
@@ -133,6 +139,12 @@ devDependencies:
   postcss-comment:
     specifier: ^2.0.0
     version: 2.0.0
+  sass:
+    specifier: ^1.69.7
+    version: 1.69.7
+  sass-loader:
+    specifier: ^13.3.3
+    version: 13.3.3(sass@1.69.7)(webpack@4.47.0)
   vue-template-compiler:
     specifier: '>= 2.6.14 < 2.7'
     version: 2.6.14
@@ -1540,6 +1552,10 @@ packages:
       - supports-color
     dev: true
 
+  /@dcloudio/uni-ui@1.4.28:
+    resolution: {integrity: sha512-e/lSbvR79KH9+d3D4ueNbvD6szigjO/5IyjBNmiTqaj0PTS324fBV3L6f3s1qpkYonM4rdOl000hVOcAg6Gh/A==}
+    dev: false
+
   /@dcloudio/vue-cli-plugin-hbuilderx@2.0.1-alpha-36920221121001:
     resolution: {integrity: sha512-gVS3KTyfgb76t9BscZiJXVN9cYvfFtwgo7g/A3pyjbmPnKV5E/CltM9znazuNtzMwuwztSgVwCp/JS1obdOnkA==}
     dependencies:
@@ -2913,7 +2929,7 @@ packages:
     dependencies:
       '@babel/core': 7.23.7
       '@vue/babel-preset-app': 5.0.8(@babel/core@7.23.7)(core-js@3.35.0)(vue@2.6.14)
-      '@vue/cli-service': 5.0.8(vue-template-compiler@2.6.14)(vue@2.6.14)
+      '@vue/cli-service': 5.0.8(sass-loader@13.3.3)(vue-template-compiler@2.6.14)(vue@2.6.14)
       '@vue/cli-shared-utils': 5.0.8
       babel-loader: 8.3.0(@babel/core@7.23.7)(webpack@5.89.0)
       thread-loader: 3.0.4(webpack@5.89.0)
@@ -2934,7 +2950,7 @@ packages:
     peerDependencies:
       '@vue/cli-service': ^3.0.0 || ^4.0.0 || ^5.0.0-0
     dependencies:
-      '@vue/cli-service': 5.0.8(vue-template-compiler@2.6.14)(vue@2.6.14)
+      '@vue/cli-service': 5.0.8(sass-loader@13.3.3)(vue-template-compiler@2.6.14)(vue@2.6.14)
       '@vue/cli-shared-utils': 5.0.8
     transitivePeerDependencies:
       - encoding
@@ -2945,10 +2961,10 @@ packages:
     peerDependencies:
       '@vue/cli-service': ^3.0.0 || ^4.0.0 || ^5.0.0-0
     dependencies:
-      '@vue/cli-service': 5.0.8(vue-template-compiler@2.6.14)(vue@2.6.14)
+      '@vue/cli-service': 5.0.8(sass-loader@13.3.3)(vue-template-compiler@2.6.14)(vue@2.6.14)
     dev: true
 
-  /@vue/cli-service@5.0.8(vue-template-compiler@2.6.14)(vue@2.6.14):
+  /@vue/cli-service@5.0.8(sass-loader@13.3.3)(vue-template-compiler@2.6.14)(vue@2.6.14):
     resolution: {integrity: sha512-nV7tYQLe7YsTtzFrfOMIHc5N2hp5lHG2rpYr0aNja9rNljdgcPZLyQRb2YRivTHqTv7lI962UXFURcpStHgyFw==}
     engines: {node: ^12.0.0 || >= 14.0.0}
     hasBin: true
@@ -3022,6 +3038,7 @@ packages:
       postcss: 8.4.33
       postcss-loader: 6.2.1(postcss@8.4.33)(webpack@5.89.0)
       progress-webpack-plugin: 1.0.16(webpack@5.89.0)
+      sass-loader: 13.3.3(sass@1.69.7)(webpack@4.47.0)
       ssri: 8.0.1
       terser-webpack-plugin: 5.3.10(webpack@5.89.0)
       thread-loader: 3.0.4(webpack@5.89.0)
@@ -6787,6 +6804,10 @@ packages:
     resolution: {integrity: sha512-XXOFtyqDjNDAQxVfYxuF7g9Il/IbWmmlQg2MYKOH8ExIT1qg6xc4zyS3HaEEATgs1btfzxq15ciUiY7gjSXRGQ==}
     dev: false
 
+  /immutable@4.3.4:
+    resolution: {integrity: sha512-fsXeu4J4i6WNWSikpI88v/PcVflZz+6kMhUfIwc5SY+poQRPnaf5V7qds6SUyUN3cVxEzuCab7QIoLOQ+DQ1wA==}
+    dev: true
+
   /import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -10113,6 +10134,40 @@ packages:
       - supports-color
     dev: true
 
+  /sass-loader@13.3.3(sass@1.69.7)(webpack@4.47.0):
+    resolution: {integrity: sha512-mt5YN2F1MOZr3d/wBRcZxeFgwgkH44wVc2zohO2YF6JiOMkiXe4BYRZpSu2sO1g71mo/j16txzUhsKZlqjVGzA==}
+    engines: {node: '>= 14.15.0'}
+    peerDependencies:
+      fibers: '>= 3.1.0'
+      node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
+      sass: ^1.3.0
+      sass-embedded: '*'
+      webpack: ^5.0.0
+    peerDependenciesMeta:
+      fibers:
+        optional: true
+      node-sass:
+        optional: true
+      sass:
+        optional: true
+      sass-embedded:
+        optional: true
+    dependencies:
+      neo-async: 2.6.2
+      sass: 1.69.7
+      webpack: 4.47.0
+    dev: true
+
+  /sass@1.69.7:
+    resolution: {integrity: sha512-rzj2soDeZ8wtE2egyLXgOOHQvaC2iosZrkF6v3EUG+tBwEvhqUCzm0VP3k9gHF9LXbSrRhT5SksoI56Iw8NPnQ==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.3.4
+      source-map-js: 1.0.2
+    dev: true
+
   /sax@1.3.0:
     resolution: {integrity: sha512-0s+oAmw9zLl1V1cS9BtZN7JAd0cW5e0QH4W3LWEK6a4LaLEA2OTpGYWDY+6XasBLtz6wkm3u1xRw95mRuJ59WA==}
     dev: true
@@ -11349,6 +11404,14 @@ packages:
 
   /vue-hot-reload-api@2.3.4:
     resolution: {integrity: sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog==}
+
+  /vue-i18n@8.28.2(vue@2.6.14):
+    resolution: {integrity: sha512-C5GZjs1tYlAqjwymaaCPDjCyGo10ajUphiwA922jKt9n7KPpqR7oM1PCwYzhB/E7+nT3wfdG3oRre5raIT1rKA==}
+    peerDependencies:
+      vue: ^2
+    dependencies:
+      vue: 2.6.14
+    dev: false
 
   /vue-loader@15.11.1(css-loader@2.1.1)(vue-template-compiler@2.6.14)(webpack@4.47.0):
     resolution: {integrity: sha512-0iw4VchYLePqJfJu9s62ACWUXeSqM30SQqlIftbYWM3C+jpPcEHKSPUZBLjSF9au4HTHQ/naF6OGnO3Q/qGR3Q==}
